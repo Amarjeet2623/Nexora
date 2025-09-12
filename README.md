@@ -1,4 +1,4 @@
-# 📹💬 Nexora  
+## 📹💬 Nexora  
 *Real-time Video Calling & Chat Application*  
 
 [![Live Demo](https://img.shields.io/badge/🚀-Live%20Demo-blue)](https://your-nexora-demo-link.vercel.app/)  
@@ -36,7 +36,7 @@ Built with the *MERN stack, **Tailwind CSS, and secured using **JWT authenticati
 
 ### 1️⃣ Clone the repository  
 ```bash
-git clone https://github.com/your-username/nexora.git
+git clone https://github.com/Amarjeet2623/Nexora.git
 cd nexora
 2️⃣ Install dependencies
 bash
