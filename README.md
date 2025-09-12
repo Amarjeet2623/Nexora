@@ -1,80 +1,143 @@
-## 📹💬 Nexora  
-*Real-time Video Calling & Chat Application*  
+# 🚀 Nexora – Real-Time Chat & Video Call App  
 
-[![Live Demo](https://img.shields.io/badge/🚀-Live%20Demo-blue)](https://your-nexora-demo-link.vercel.app/)  
+🌐 **Live Demo:** [https://nexora.vercel.app/](https://nexora.vercel.app/)  
 
----
+[![MERN](https://img.shields.io/badge/Stack-MERN-green?style=flat-square&logo=mongodb)]()  
+[![Frontend](https://img.shields.io/badge/Frontend-React-blue?style=flat-square&logo=react)]()  
+[![Backend](https://img.shields.io/badge/Backend-Express-black?style=flat-square&logo=express)]()  
+[![Database](https://img.shields.io/badge/Database-MongoDB-brightgreen?style=flat-square&logo=mongodb)]()  
+[![WebRTC](https://img.shields.io/badge/Video-Calls-orange?style=flat-square&logo=webrtc)]()  
+[![Deployed](https://img.shields.io/badge/Deployed-Live-success?style=flat-square&logo=vercel)]()  
 
-## 🌟 Overview  
-*Nexora* is a powerful *real-time communication platform* that combines *video calling* and *instant messaging* into one seamless web application.  
-Built with the *MERN stack, **Tailwind CSS, and secured using **JWT authentication*, it delivers a modern, responsive, and highly interactive user experience.  
+**Nexora** is a modern **real-time chat & video calling application** built with the **MERN stack**.  
+Enjoy **instant messaging, voice/video calls, notifications, and a sleek UI** — all in one place.  
 
 ---
 
 ## ✨ Features  
-- 🔐 *User Authentication* with *JWT*  
-- 📹 *High-quality real-time video calls*  
-- 💬 *Instant real-time chat* (1:1 and group messaging)  
-- 👤 *User presence & status indicators*  
-- 🎨 *Modern, responsive UI* powered by *Tailwind CSS*  
-- ⚡ *Low-latency communication* using WebRTC & WebSockets  
-- 📱 *Mobile-friendly design*  
+
+- 🔒 **Authentication** — Secure login/signup with JWT, protected routes  
+- 💬 **Real-Time Chat** — One-to-one and group messaging with WebSockets  
+- 📷 **Media Sharing** — Send images, files, and emojis in chat  
+- 🎥 **Voice & Video Calls** — High-quality calls powered by **WebRTC**  
+- 👤 **User Profiles** — Avatars, status updates, online/offline indicators  
+- 🔔 **Notifications** — Instant message/call notifications  
+- 🎨 **Modern UI** — Responsive, TailwindCSS + shadcn/ui + Framer Motion animations  
+- ⚡ **Scalable APIs** — Node.js + Express backend with modular structure  
+- 🌎 **Deployment Ready** — Frontend (Vercel), Backend (Render/Heroku), MongoDB Atlas  
 
 ---
 
-## 🛠 Tech Stack  
-- *Frontend:* React.js, Tailwind CSS  
-- *Backend:* Node.js, Express.js  
-- *Database:* MongoDB  
-- *Authentication:* JWT (JSON Web Tokens)  
-- *Real-time Communication:* WebRTC, Socket.io  
-- *Deployment:* Vercel / Render / Railway (your choice)  
+## 🛠️ Tech Stack  
+
+| Layer      | Tools & Libraries |  
+|-----------|-------------------|  
+| **Frontend** | React, Zustand/Redux, TailwindCSS, shadcn/ui, Framer Motion, Stream/WebRTC |  
+| **Backend** | Node.js, Express.js, Socket.IO |  
+| **Database** | MongoDB Atlas |  
+| **Auth** | JWT (Cookies) |  
+| **Media Handling** | Cloudinary / Multer |  
 
 ---
 
-## 🚀 Getting Started  
+## ⚡ Getting Started  
 
-### 1️⃣ Clone the repository  
+### 🔑 Prerequisites  
+- Node.js & npm  
+- MongoDB Atlas account  
+- Cloudinary account (for media upload)  
+
+### 🚀 Installation  
+
 ```bash
-git clone https://github.com/Amarjeet2623/Nexora.git
+# Clone the repository
+git clone https://github.com/yourusername/nexora.git
 cd nexora
-2️⃣ Install dependencies
-bash
-Copy code
-# Install server dependencies
-cd server
-npm install
 
-# Install client dependencies
-cd ../client
-npm install
-3️⃣ Set up environment variables
-Create a .env file in the server directory and add:
+# Install backend dependencies
+cd backend && npm install
+
+# Install frontend dependencies
+cd ../frontend && npm install
+⚙️ Environment Setup
+Backend → /backend/.env
 
 env
 Copy code
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-4️⃣ Start the application
+PORT=8000
+MONGODB_URI=your_mongo_connection_string
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+Frontend → /frontend/.env.local
+
+env
+Copy code
+VITE_API_URL=http://localhost:8000
+▶️ Run the App
 bash
 Copy code
-# Start backend
-cd server
+# Start backend server
+cd backend
 npm run dev
 
-# Start frontend
-cd ../client
-npm start
-Now visit 👉 http://localhost:3000
+# Start frontend development server
+cd frontend
+npm run dev
+Now visit 👉 http://localhost:5173
 
-📸 Screenshots
-Video Call Screen	Chat Screen	Authentication
+📁 Project Structure
+csharp
+Copy code
+nexora/
+├── backend/
+│   ├── models/         # Database models
+│   ├── controllers/    # Route controllers
+│   ├── routes/         # API routes
+│   ├── sockets/        # Socket.IO events (chat, calls)
+│   ├── middleware/     # Authentication & error handlers
+│   └── utils/          # Helper functions
+├── frontend/
+│   ├── src/            # React source code
+│   ├── .env.local      # Frontend env vars
+│   └── vite.config.js  # Vite config
+└── README.md
+🔗 API Endpoints
+Endpoint	Description
+/api/auth/	Login / Register / Logout
+/api/users/	Fetch & manage user profiles
+/api/messages/	Send / fetch chat messages
+/api/calls/	Initialize / accept / reject calls
 
-🤝 Contributing
-Contributions are welcome! If you’d like to improve Nexora, please fork the repo and submit a pull request.
+🌩️ WebRTC + Socket.IO Integration
+WebRTC handles peer-to-peer video & audio streaming
 
-📜 License
-This project is licensed under the MIT License.
+Socket.IO manages real-time events (chat, typing indicators, call requests)
 
-💡 Nexora is more than just a chat app — it’s your next step toward seamless real-time communication.
+Cloudinary used for storing images and files
+
+👨‍💻 Author
+Your Name
+🔗 GitHub | 🔗 LinkedIn
+
+💡 Contributions, issues, and feature requests are welcome!
+
+📄 License
+Licensed under the MIT License.
+
+🙏 Acknowledgements
+WebRTC — Real-time media streaming
+
+Socket.IO — Real-time communication
+
+MongoDB Atlas — Database hosting
+
+Cloudinary — Media uploads & CDN
+
+Vercel — Frontend deployment
+
+shadcn/ui — Modern UI components
+
+
 
