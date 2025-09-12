@@ -36,7 +36,7 @@ Enjoy **instant messaging, voice/video calls, notifications, and a sleek UI** �
 | **Backend** | Node.js, Express.js, Socket.IO |  
 | **Database** | MongoDB Atlas |  
 | **Auth** | JWT (Cookies) |  
-| **Media Handling** | Cloudinary / Multer |  
+| **Media Handling** | steam Api / Multer |  
 
 ---
 
@@ -45,7 +45,7 @@ Enjoy **instant messaging, voice/video calls, notifications, and a sleek UI** �
 ### 🔑 Prerequisites  
 - Node.js & npm  
 - MongoDB Atlas account  
-- Cloudinary account (for media upload)  
+-  
 
 ### 🚀 Installation  
 
@@ -64,17 +64,20 @@ Backend → /backend/.env
 
 env
 Copy code
-PORT=8000
+PORT=5001
 MONGODB_URI=your_mongo_connection_string
-JWT_SECRET=your_jwt_secret
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+STEAM_API_NAME=your_steam_name
+STEAM_API_SECRETY=your_steam_api_key
+JWT_SECRET_KEY=your_jwt_secret
+
+
+
+
 Frontend → /frontend/.env.local
 
 env
 Copy code
-VITE_API_URL=http://localhost:8000
+VITE_API_URL=http://localhost:5001
 ▶️ Run the App
 bash
 Copy code
