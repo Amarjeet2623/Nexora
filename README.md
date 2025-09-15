@@ -36,7 +36,7 @@ Enjoy **instant messaging, voice/video calls, notifications, and a sleek UI** �
 | **Backend** | Node.js, Express.js, Socket.IO |  
 | **Database** | MongoDB Atlas |  
 | **Auth** | JWT (Cookies) |  
-| **Media Handling** | steam Api / Multer |  
+| **videochat** | steam Api / Multer |  
 
 ---
 
@@ -45,7 +45,7 @@ Enjoy **instant messaging, voice/video calls, notifications, and a sleek UI** �
 ### 🔑 Prerequisites  
 - Node.js & npm  
 - MongoDB Atlas account  
--  
+- Steam Api 
 
 ### 🚀 Installation  
 
@@ -69,9 +69,6 @@ MONGODB_URI=your_mongo_connection_string
 STEAM_API_NAME=your_steam_name
 STEAM_API_SECRETY=your_steam_api_key
 JWT_SECRET_KEY=your_jwt_secret
-
-
-
 
 Frontend → /frontend/.env.local
 
@@ -118,8 +115,6 @@ WebRTC handles peer-to-peer video & audio streaming
 
 Socket.IO manages real-time events (chat, typing indicators, call requests)
 
-Cloudinary used for storing images and files
-
 👨‍💻 Author
 Your Name
 🔗 GitHub | 🔗 LinkedIn
@@ -136,11 +131,7 @@ Socket.IO — Real-time communication
 
 MongoDB Atlas — Database hosting
 
-Cloudinary — Media uploads & CDN
 
 Vercel — Frontend deployment
 
 shadcn/ui — Modern UI components
-
-
-
