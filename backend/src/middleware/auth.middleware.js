@@ -22,6 +22,9 @@ export const protectRoute = async (req, res, next) => {
     }
 
     req.user = user;
+    console.log("Cookies received:", req.cookies);
+    console.log("Decoded token:", decoded);
+
 
     next();
   } catch (error) {
