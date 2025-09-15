@@ -55,7 +55,7 @@ export async function signup(req, res) {
       maxAge: 7 * 24 * 60 * 60 * 1000,
       httpOnly: true, // prevent XSS attacks,
       sameSite: isProduction ? "none" : "lax",  // <-- FIX
-      secure: isProduction,                     // <-- FIX
+      secure: true,                     // <-- FIX
     });
 
     res.status(201).json({ success: true, user: newUser });
@@ -88,7 +88,7 @@ export async function login(req, res) {
       maxAge: 7 * 24 * 60 * 60 * 1000,
       httpOnly: true, // prevent XSS attacks,
       sameSite: isProduction ? "none" : "lax",  // <-- FIX
-      secure: isProduction,                     // <-- FIX
+      secure:true,                     // <-- FIX
     });
 
     res.status(200).json({ success: true, user });
