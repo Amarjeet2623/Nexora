@@ -49,12 +49,11 @@ export async function signup(req, res) {
     const token = jwt.sign({ userId: newUser._id }, process.env.JWT_SECRET_KEY, {
       expiresIn: "7d",
     });
-    const isProduction = process.env.NODE_ENV === "production";
 
     res.cookie("jwt", token, {
       maxAge: 7 * 24 * 60 * 60 * 1000,
       httpOnly: true, // prevent XSS attacks,
-      sameSite: isProduction ? "none" : "lax",  // <-- FIX
+      sameSite: "none",  // <-- FIX
       secure: true,                     // <-- FIX
     });
 
@@ -82,13 +81,12 @@ export async function login(req, res) {
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET_KEY, {
       expiresIn: "7d",
     });
-    const isProduction = process.env.NODE_ENV === "production";
 
     res.cookie("jwt", token, {
       maxAge: 7 * 24 * 60 * 60 * 1000,
       httpOnly: true, // prevent XSS attacks,
-      sameSite: isProduction ? "none" : "lax",  // <-- FIX
-      secure:true,                     // <-- FIX
+      sameSite: "none",  // <-- FIX
+      secure: true,                     // <-- FIX
     });
 
     res.status(200).json({ success: true, user });
